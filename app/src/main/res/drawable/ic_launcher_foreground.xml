@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Glowing water drop icon -->
+    <path
+        android:pathData="M54,25 C54,25 32,53 32,68 C32,80.15 41.85,90 54,90 C66.15,90 76,80.15 76,68 C76,53 54,25 54,25 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="54"
+                android:endY="90"
+                android:startX="54"
+                android:startY="25"
+                android:type="linear">
+                <item
+                    android:color="#00E5FF"
+                    android:offset="0.0" />
+                <item
+                    android:color="#00B0FF"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Highlight shine inside drop -->
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M44,58 C41,63 41,70 44,76 C42,74 41,70 41.5,66 C42,62 44,58 44,58 Z" />
+    <!-- Small bubble -->
+    <path
+        android:fillColor="#B3FFFFFF"
+        android:pathData="M58,74 A4,4 0 1,1 58,66 A4,4 0 1,1 58,74 Z" />
+</vector>

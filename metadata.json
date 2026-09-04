@@ -1,0 +1,6 @@
+{
+  "name": "Hydratation",
+  "description": "Application de suivi d'hydratation quotidienne avec cercle de progression pour un objectif de 2L, ajouts rapides de 250ml et thème sombre turquoise.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
