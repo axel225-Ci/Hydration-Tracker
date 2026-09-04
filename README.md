@@ -1,22 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+Hydration Tracker
+AquaTrack est une application mobile Android moderne et intuitive conçue pour suivre la consommation d'eau quotidienne et encourager l'atteinte des objectifs d'hydratation.
 
-# Run and deploy your AI Studio app
+Fonctionnalités
+Suivi en Temps Réel : Jauge circulaire dynamique affichant la progression en millilitres par rapport à l'objectif quotidien (par défaut : 2000 ml).
 
-This contains everything you need to run your app locally.
+Ajout Rapide : Boutons d'action optimisés pour consigner instantanément 100 ml, 250 ml ou 500 ml d'eau.
 
-View your app in AI Studio: https://ai.studio/apps/840d0cc0-9d7d-44ec-babe-f8bd0566bc20
+Indicateur Visuel : Jauge de progression secondaire sous forme de gouttes d'eau interactives.
 
-## Run Locally
+Historique Journalier : Liste défilable des derniers ajouts avec leur horodatage précis.
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+Réinitialisation : Fonctionnalité de remise à zéro du compteur via une boîte de dialogue sécurisée.
 
+Technologies & Architecture
+Langage : Kotlin
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
-7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+Interface Graphique : Jetpack Compose (Material Design 3)
+
+Architecture : MVVM (Model-View-ViewModel)
+
+Gestion d'État : StateFlow et Kotlin Coroutines
+
+Compatibilité : Android 7.0 (API Level 24) et supérieur
+
+Installation & Utilisation
+Prérequis
+Android Studio à jour.
+
+JDK 11 configuré pour la compilation (JavaVersion.VERSION_11).
+
+Lancement local
+Clonez ce dépôt sur votre machine :
+
+Bash
+git clone https://github.com/axel225-Ci/Hydration-Tracker.git
+Ouvrez le projet dans Android Studio.
+
+Attendez la fin de la synchronisation Gradle.
+
+Lancez le projet sur un émulateur ou un téléphone Android physique branché en mode débogage USB.
+
+Notes de Configuration (Développeurs)
+Alignement JVM : Le projet est configuré pour compiler en Java 11. Si vous modifiez l'environnement de compilation, assurez-vous que sourceCompatibility, targetCompatibility et kotlinOptions { jvmTarget } sont synchronisés dans le fichier build.gradle.kts.
+
+Intégration Firebase : L'infrastructure du projet est prête pour l'intégration des services Firebase (AI, AppCheck). Pour activer ces fonctionnalités, ajoutez un fichier google-services.json valide dans le dossier app/ et réactivez les dépendances commentées dans le fichier Gradle de l'application.
